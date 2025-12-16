@@ -1,0 +1,358 @@
+* {
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    margin: 0px;
+    padding: 20px;
+    background-color: #f5f5f5;
+}
+
+.certificate-container {
+    max-width: 90%;
+    width: 100%;
+    margin: 1rem auto;
+    background-color: white;
+    padding: 30px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    border-radius: 2px;
+}
+
+header {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 60px;
+    width: 110px;
+    margin-bottom: 1px;
+}
+
+.title {
+    flex-grow: 1;
+    text-align:  center;
+}
+
+h1 {
+    font-size: 45px;
+    font-weight: bolder;
+    padding-bottom: 0px;
+}
+
+h1, h4, h6 {
+    margin-bottom: 0%;
+    padding-bottom: 0%;
+}
+
+h4, h5, h6 {
+    margin-top: 0%;
+}
+
+table {
+    width: 100%;
+    min-width: 300px;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    margin-left: 1px;
+}
+
+th, td {
+    border: 1px solid #000000;
+    padding: 2px;
+    text-align: left;
+    vertical-align: top;
+    font-size: 13px;
+}
+
+th {
+    background-color: #003366;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+}
+
+.job-completion, .equipment, .personnel {
+    font-size: 16px;
+}
+
+.job-completion-table td{
+    font-weight: bold;
+    padding-left: 3px;
+}
+
+.equipment-table thead th, .personnel-table thead th {
+    padding-bottom: 4px !important;
+    border-bottom: 2px solid #fff;
+}
+
+.equipment-table tbody td,
+.personnel-table tbody td {
+    padding-top: 4px;
+}
+
+.equipment-table, .personnel-table td {
+    text-align: center;
+}
+
+.items, .days, .quantity {
+    width: 45px;
+    text-align: center;
+}
+
+.equipment-table input,
+.personnel-table input {
+    text-align: center !important;
+    display: block;
+    margin: auto;
+    box-sizing: border-box;
+}
+
+.job-completion-table td:first-child,
+.equipment-table td:first-child,
+.personnel-table td:first-child,
+.signature-section td:first-child {
+    width: 18%;
+}
+
+.job-completion-table td:nth-child(2),
+.equipment-table td:nth-child(2),
+.personnel-table td:nth-child(2),
+.signature-section td:nth-child(2) {
+    width: 30%;
+}
+
+.job-completion-table td:nth-child(3),
+.equipment-table td:nth-child(3),
+.personnel-table td:nth-child(3),
+.signature-section td:nth-child(3) {
+    width: 16%;
+}
+
+.signature-section td:first-child,
+.signature-section td:nth-child(3) {
+    background-color: #003366;
+    color: white;
+}
+
+.sign {
+    width: 100%;
+    border: none;
+    background: transparent;
+    font-size: 14px;
+    font-style: italic;
+}
+
+.editable:focus {
+    background-color: #fff;
+    outline: 2px solid #4d90fe;
+}
+
+input[type="text"], input[type="date"], input[type="number"] {
+    border-radius: 0%;
+    border: none;
+}
+
+input[type="text"] {
+    box-sizing: border-box;
+    margin: 0%;
+    width: 100%;
+}
+
+input[type="number"] {
+    width: 50px;
+}
+
+/* Fix table overflow - 440px and below */
+@media screen and (max-width: 440px) {
+    body {
+        background-color: white !important;
+    }
+    table {
+        min-width: 0 !important;
+        width: 100% !important;
+        font-size: 9px;
+    }
+    
+    th, td {
+        font-size: 9px;
+        padding: 1px;
+        min-width: 0;
+        max-width: none;
+    }
+    
+    input[type="number"] {
+        width: 30px !important;
+        font-size: 9px;
+    }
+    
+    .items, .days, .quantity {
+        width: 30px !important;
+    }
+    
+    .job-completion-table td {
+        width: 24% !important;
+        padding: 1px 2px;
+    }
+    
+    .table-container {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        margin-bottom: 10px;
+    }
+    
+    .equipment-table, .personnel-table {
+        min-width: 380px;
+    }
+}
+
+/* Tablet (768px and below) */
+@media screen and (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+    
+    .certificate-container {
+        padding: 20px;
+        max-width: 95%;
+    }
+    
+    h1 {
+        font-size: 22px;
+    }
+
+    .job-completion, .equipment, .personnel {
+        font-size: 14px;
+    }
+
+    th, td {
+        font-size: 12px;
+        padding: 4px 2px;
+    }
+
+    /* Stack header vertically */
+    header {
+        flex-direction: column;
+        text-align: center;
+        margin-top: 2px;
+    }
+
+    .logo img {
+        height: 30px;
+        width: 50px;
+        margin-bottom: 5px;
+        padding-bottom: 0%;
+    }
+
+    .title {
+        margin-bottom: 5px;
+        padding-bottom: 5px;
+    }
+
+    /* Relax column widths */
+    .job-completion-table td:first-child,
+    .equipment-table td:first-child,
+    .personnel-table td:first-child,
+    .signature-section td:first-child {
+        width: 22%;
+    }
+
+    .job-completion-table td:nth-child(2),
+    .equipment-table td:nth-child(2),
+    .personnel-table td:nth-child(2),
+    .signature-section td:nth-child(2) {
+        width: 28%;
+    }
+    
+    input[type="number"] {
+        width: 45px;
+    }
+}
+
+/* Mobile (480px and below) */
+@media screen and (max-width: 480px) {
+    body {
+        background-color: white !important; /* Also remove here */
+        padding: 0;
+        margin: 0%;
+    }
+    .certificate-container {
+        padding: 10px;
+        max-width: 100%;
+        margin: 0.5rem auto;
+    }
+
+    h1 {
+        font-size: 18px;
+    }
+
+    h4 {
+        font-size: 16px;
+    }
+
+    h6 {
+        padding: 0px;
+        margin-top: 0%;
+        margin-bottom: 10px;
+    }
+
+    .job-completion, .equipment, .personnel {
+        font-size: 13px;
+    }
+
+    th, td {
+        font-size: 11px;
+        padding: 3px 1px;
+    }
+
+    .logo img {
+        height: 40px;
+        width: 70px;
+    }
+
+    /* Equal column widths for mobile */
+    .job-completion-table td:first-child,
+    .equipment-table td:first-child,
+    .personnel-table td:first-child,
+    .signature-section td:first-child,
+    .job-completion-table td:nth-child(2),
+    .equipment-table td:nth-child(2),
+    .personnel-table td:nth-child(2),
+    .signature-section td:nth-child(2),
+    .job-completion-table td:nth-child(3),
+    .equipment-table td:nth-child(3),
+    .personnel-table td:nth-child(3),
+    .signature-section td:nth-child(3) {
+        width: 25% !important;
+    }
+
+    .items, .days, .quantity {
+        width: 40px;
+    }
+
+    input[type="number"] {
+        width: 40px;
+        font-size: 12px;
+    }
+
+    .sign {
+        font-size: 12px;
+    }
+
+    /* Increase touch targets */
+    input, select {
+        min-height: 30px;
+        font-size: 13px;
+    }
+    
+    /* Additional 480px fixes */
+    table {
+        min-width: 0 !important;
+    }
+    
+    .table-container {
+        overflow-x: auto;
+        margin-bottom: 10px;
+    }
+}
