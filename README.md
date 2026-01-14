@@ -26,7 +26,7 @@ The layout is optimized for desktop, tablet, and mobile screens using CSS media 
 
 ### Desktop View
 > Full-width layout with tables fully visible
-![Desktop View](screenshots/desktop.png)
+![Desktop View](screenshots/desktop-view.png)
 
 ### Tablet View
 ![Tablet View](screenshots/tablet-view.png)
