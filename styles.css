@@ -222,6 +222,12 @@ input[type="number"] {
         font-size: 22px;
     }
 
+     h6 {
+        padding: 0px;
+        margin-top: 0%;
+        margin-bottom: 10px;
+    }
+    
     .job-completion, .equipment, .personnel {
         font-size: 14px;
     }
@@ -231,7 +237,6 @@ input[type="number"] {
         padding: 4px 2px;
     }
 
-    /* Stack header vertically */
     header {
         flex-direction: column;
         text-align: center;
@@ -250,7 +255,6 @@ input[type="number"] {
         padding-bottom: 5px;
     }
 
-    /* Relax column widths */
     .job-completion-table td:first-child,
     .equipment-table td:first-child,
     .personnel-table td:first-child,
@@ -273,7 +277,7 @@ input[type="number"] {
 /* Mobile (480px and below) */
 @media screen and (max-width: 480px) {
     body {
-        background-color: white !important; /* Also remove here */
+        background-color: white !important;
         padding: 0;
         margin: 0%;
     }
@@ -311,7 +315,6 @@ input[type="number"] {
         width: 70px;
     }
 
-    /* Equal column widths for mobile */
     .job-completion-table td:first-child,
     .equipment-table td:first-child,
     .personnel-table td:first-child,
@@ -340,19 +343,30 @@ input[type="number"] {
         font-size: 12px;
     }
 
-    /* Increase touch targets */
     input, select {
         min-height: 30px;
         font-size: 13px;
     }
-    
-    /* Additional 480px fixes */
+
     table {
         min-width: 0 !important;
     }
-    
+
     .table-container {
         overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
         margin-bottom: 10px;
+        position: relative;
+    }
+
+    /* Subtle swipe hint */
+    .table-container::before {
+        content: "Swipe →";
+        display: block;
+        text-align: right;
+        font-size: 11px;
+        font-style: italic;
+        color: #666;
+        padding: 4px 6px;
     }
 }
